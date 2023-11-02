@@ -1,0 +1,6 @@
+# Prefix key
+escape ^Oo
+
+# Avoid hanging up
+autodetach on
+
