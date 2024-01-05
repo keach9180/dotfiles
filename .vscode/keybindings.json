@@ -1,0 +1,5 @@
+[
+{ "key": "ctrl+q", "command": "-workbench.action.quickOpenView" },
+{ "key": "ctrl+q", "command": "workbench.action.quickOpenView",
+                      "when": "editorTextFocus" }
+]
