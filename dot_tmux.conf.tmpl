@@ -1,1 +1,21 @@
 set -g prefix C-q
+
+bind R source-file ~/.tmux.conf \; display-message ".tmux.conf reloaded."
+
+# Vim-like keybindings
+setw -g mode-keys vi
+## Pane
+bind v split-window -h
+bind s split-window -v
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+## Copy mode
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi y send -X copy-selection-and-cancel
+bind -T copy-mode-vi i send -X cancel
+bind -T copy-mode-vi I send -X cancel
+bind -T copy-mode-vi a send -X cancel
+bind -T copy-mode-vi A send -X cancel
+unbind -T copy-mode-vi Enter
