@@ -1,0 +1,15 @@
+{{ if eq .chezmoi.os "darwin" -}}
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+{{ end -}}
+
+" Basic
+set number
+set expandtab
+set tabstop=4
+set shiftwidth=0
+set hlsearch
+set ignorecase
+
+" Make
+autocmd FileType make setlocal noexpandtab
