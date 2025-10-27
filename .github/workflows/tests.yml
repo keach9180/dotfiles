@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Chezmoi
         run: |
-          sh -c "$(curl -fsLS get.chezmoi.io)"
+          sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 
       - name: Install Bats
         run: |
@@ -35,5 +35,7 @@ jobs:
           sudo apt-get install -y bats
 
       - name: Run Bats tests
+        env:
+          PATH: ${{ env.HOME }}/.local/bin:${{ env.PATH }}
         run: |
           bats tests/bats
