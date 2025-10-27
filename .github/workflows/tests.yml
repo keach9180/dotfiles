@@ -25,6 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Install Chezmoi
+        run: |
+          sh -c "$(curl -fsLS get.chezmoi.io)"
+
       - name: Install Bats
         run: |
           sudo apt-get update
