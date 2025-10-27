@@ -30,10 +30,10 @@ jobs:
           sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      - name: Install Bats
+      - name: Install Bats and Zsh
         run: |
           sudo apt-get update
-          sudo apt-get install -y bats
+          sudo apt-get install -y bats zsh
 
       - name: Run Bats tests
         run: |
