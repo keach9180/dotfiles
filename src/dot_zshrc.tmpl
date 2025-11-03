@@ -109,3 +109,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e="$EDITOR"
+
+# Starship
+
+if command -v starship > /dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
