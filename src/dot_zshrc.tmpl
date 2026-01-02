@@ -110,6 +110,13 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e="$EDITOR"
 
+# Mise
+
+if command -v mise > /dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+  eval "$(mise completion zsh)"
+fi
+
 # Starship
 
 if command -v starship > /dev/null 2>&1; then
