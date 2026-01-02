@@ -110,6 +110,12 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e="$EDITOR"
 
+# chezmoi
+
+{{ if or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin") -}}
+alias czcd='SHELL=/usr/bin/zsh chezmoi cd'
+{{- end }}
+
 # Mise
 
 if command -v mise > /dev/null 2>&1; then
