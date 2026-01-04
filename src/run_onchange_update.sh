@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mise install
+~/.local/bin/mise install
