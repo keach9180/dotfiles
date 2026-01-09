@@ -1,0 +1,7 @@
+*.swp
+*.swo
+*.bak
+*.tmp
+.vscode/
+.DS_Store
+~*

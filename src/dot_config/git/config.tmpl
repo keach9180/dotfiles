@@ -1,0 +1,46 @@
+[core]
+    excludesFile = ~/.config/git/ignore
+
+[pull]
+    rebase = true
+
+[rebase]
+    autoStash = true
+
+[merge]
+    conflictStyle = zdiff3
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[rerere]
+    enabled = true
+
+[alias]
+    a = add
+    b = branch
+    c = commit --verbose
+    co = checkout
+    cp = cherry-pick
+    d = diff
+    dc = diff --cached
+    f = fetch
+    graph = log --graph --oneline
+    l = log --stat
+    m = merge
+    p = pull
+    pm = pull --no-rebase
+    pr = pull --rebase
+    rb = rebase
+    rbi = rebase -i
+    sw = switch
+    sw2d = switch develop
+    sw2m = switch main
+    st = status
+    t = tag
+    unstage = restore --staged
+    wt = worktree
